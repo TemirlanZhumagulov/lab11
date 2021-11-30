@@ -5,17 +5,14 @@
 	box-sizing: border-box;
 }
 body{
-	background: #fff;
 	font-family: Poppins;
 	font-size: 16px;
 	line-height: 24px;
 	position: relative;
 	height: 100vh;
+	display: flex;
 }
-small{
-	position: absolute;
-}
-.form-container{
+.container{
 	width: 430px;
 	position: absolute;
 	left: 123px;
@@ -31,19 +28,19 @@ small{
 	font-size: 20px;
 	line-height: 30px;
 }
-.form-container__title{
+.title{
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 45px;
 	margin-bottom: 22px;
 }
-.form-container__text{
+.text{
 	margin-bottom: 6px;
 }
-.form-container__link{
+.link{
 	margin-bottom: 50px;
 }
-.form-container__link a{
+.link a{
 	color: #0C21C1;
 	font-weight: 600;
 	text-decoration: none;
@@ -52,7 +49,7 @@ input[type="password"], input[type="email"], input[type="text"]{
 	width: 100%;
 	border: none;
 	border-bottom: 2px solid rgba(0, 8, 66, 1);
-	margin-bottom: 42px;
+	margin-bottom: 18px;
 	outline: none;
 	padding-left: 40px;
 	height: 51px;
@@ -67,11 +64,12 @@ input[type="password"], input[type="email"], input[type="text"]{
 input[type="password"]{
 	padding-right: 30px;
 	border-bottom: 2px solid rgba(171, 171, 171, 1);
-	margin-bottom: 17px;
+	margin-bottom: 18px;
 }
 #icon1{
 	position: absolute;
 	left: 0px;
+	top: 172px;
 	padding-top: 41px;
 	padding-left: 13px;
 	z-index: 1;
@@ -79,33 +77,71 @@ input[type="password"]{
 #icon2{
 	position: absolute;
 	left: 15px;
-	top: 328px;
+	top: 305px;
 	z-index: 1;
 }
 #icon3{
 	position: absolute;
 	right: 10px;
-	top: 328px;
+	top: 305px;
 	color: rgba(171, 171, 171, 1);
+	z-index: 1;
 }
-.rem{
+#icon4{
 	position: absolute;
-	top: 382px;
-	left: 20px;
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 18px;
-	color: #000000;
+	left: 10px;
+	top: 306px;
+	z-index: 1;
 }
-.add{
-	text-align: right;
-	text-decoration: none;
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 18px;
-	color: #4D4D4D;
+#icon5{
 	position: absolute;
-	right: 0px;
+	left: 12px;
+	top: 490px;
+	z-index: 1;
+}
+#icon6{
+	position: absolute;
+	right: 12px;
+	top: 397px;
+	z-index: 1;
+}
+#icon7{
+	position: absolute;
+	left: 12px;
+	top: 397px;
+	color: black;
+	z-index: 1;
+}
+#icon8{
+	position: absolute;
+	right: 12px;
+	top: 495px;
+	color: black;
+	z-index: 1;
+}
+
+.icons{
+	display:flex;
+	justify-content: center;
+}
+.facebook{
+	background-color: blue;
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.apple{
+	color: white;
+	background-color: black;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.google img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 .btn{
 	margin-top: 60px;
@@ -126,9 +162,11 @@ input[type="password"]{
 	transition: 0.5s;
 	position: relative;
 }
+.form__help{
+	margin-top: 30px;
+}
 .btn:hover{
 	filter: brightness(1.5);
-
 }
 .icons{
 	text-align: center;
@@ -147,10 +185,28 @@ input[type="password"]{
 .facebook{
 	color: linear-gradient(180deg, #18ACFE 0%, #0163E0 99.7%);
 }
+.add{
+	text-align: right;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 18px;
+	color: #4D4D4D;
+	position: absolute;
+	right: 0px;
+}
+.rem{
+	padding-left: 10px;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 18px;
+	color: #000000;
+
+}
 .information-block{
 	position: absolute;
-	left: 583px;
-	top: -110px;
+	left: 683px;
+	top: 10px;
 	color: white;
 	width: 735px;
 	height: 859px;
@@ -187,6 +243,7 @@ input[type="password"]{
 	line-height: 30px;
 	color: #FFFFFF;
  }
+
   @media (max-width: 767px){
  	.information-block{
  		display: none;
